@@ -2,7 +2,7 @@
 
 Marp for VS Code で美しいプレゼンテーションを作成するためのカスタムCSSテーマとAI支援ガイド
 
-![Sample Slide](sample-slide.pdf)
+![Sample Slide](images/slide-00.png)
 
 ## 📋 目次
 
@@ -29,15 +29,24 @@ Marp for VS Code で美しいプレゼンテーションを作成するための
 ## 🎬 デモ
 
 ### タイトルページ
-![タイトルページ例](https://via.placeholder.com/800x450/00AB8E/ffffff?text=Marp+Custom+Theme)
+![タイトルページ例](images/slide-00.png)
+
+### 基本的な使い方
+![基本的な使い方](images/slide-02.png)
 
 ### 2段組レイアウト
-![2段組例](https://via.placeholder.com/800x450/ffffff/262626?text=2-Column+Layout)
+![2段組例](images/slide-04.png)
 
 ### ハイライトボックス
-![ハイライト例](https://via.placeholder.com/800x450/fff8e6/FFAA00?text=Highlight+Box)
+![ハイライト例](images/slide-05.png)
 
-👉 **[サンプルPDFを見る](sample-slide.pdf)**
+### テーブルの例
+![テーブル例](images/slide-06.png)
+
+### 3段組レイアウト
+![3段組例](images/slide-07.png)
+
+👉 **[サンプルPDF (sample-slide.pdf)](sample-slide.pdf)** | **[全スライド画像を見る](images/)**
 
 ---
 
@@ -194,6 +203,8 @@ Marp4VSCode-CSS-CustomPrompt/
 ├── docs/
 │   ├── custom-theme.css    # カスタムテーマ（公開用）
 │   └── index.html           # GitHub Pages ランディングページ
+├── images/
+│   └── slide-*.png          # サンプルスライド画像（13枚）
 ├── prompt/
 │   └── MARP_GUIDE.md        # AI用スライド作成ガイド
 ├── sample-slide.md          # サンプルスライド（Markdown）

@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marp Custom Theme - custom-yoshi</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', 'Hiragino Sans', 'Noto Sans JP', sans-serif;
+            line-height: 1.6;
+            color: #262626;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 3px solid #00AB8E;
+        }
+
+        h1 {
+            color: #00AB8E;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: #666;
+            font-size: 1.1rem;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            color: #00AB8E;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            padding-left: 15px;
+            border-left: 5px solid #FFAA00;
+        }
+
+        .download-box {
+            background-color: #f8f9fa;
+            padding: 25px;
+            border-radius: 8px;
+            border: 2px solid #00AB8E;
+            margin-bottom: 20px;
+        }
+
+        .download-link {
+            display: inline-block;
+            background-color: #00AB8E;
+            color: white;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+            margin-top: 10px;
+        }
+
+        .download-link:hover {
+            background-color: #008c74;
+        }
+
+        .code-box {
+            background-color: #f5f5f5;
+            padding: 20px;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 15px 0;
+        }
+
+        code {
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+            color: #262626;
+        }
+
+        .feature-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .feature-list li {
+            padding: 10px 0;
+            padding-left: 30px;
+            position: relative;
+        }
+
+        .feature-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #00AB8E;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .color-palette {
+            display: flex;
+            gap: 15px;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+
+        .color-item {
+            text-align: center;
+        }
+
+        .color-box {
+            width: 100px;
+            height: 100px;
+            border-radius: 8px;
+            margin-bottom: 8px;
+            border: 2px solid #ddd;
+        }
+
+        .color-label {
+            font-size: 0.85rem;
+            color: #666;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+            color: #666;
+        }
+
+        .github-link {
+            color: #00AB8E;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .github-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Marp Custom Theme</h1>
+            <p class="subtitle">custom-yoshi - プレゼンテーション用カスタムテーマ</p>
+        </header>
+
+        <div class="section">
+            <h2>📥 ダウンロード</h2>
+            <div class="download-box">
+                <p>以下のリンクからCSSファイルを直接参照できます：</p>
+                <div class="code-box">
+                    <code
+                        id="cssUrl">https://yoshizawariku.github.io/Marp4VSCode-CSS-CustomPrompt/custom-theme.css</code>
+                </div>
+                <a href="custom-theme.css" class="download-link" download>⬇️ CSSファイルをダウンロード</a>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>🎨 使い方</h2>
+            <p>Marpスライドのフロントマターに以下を追加してください：</p>
+
+            <div class="code-box">
+                <code>---<br>
+marp: true<br>
+theme: custom-yoshi<br>
+paginate: true<br>
+footer: 'プレゼンテーションタイトル'<br>
+style: |<br>
+&nbsp;&nbsp;@import url('https://yoshizawariku.github.io/Marp4VSCode-CSS-CustomPrompt/custom-theme.css');<br>
+---</code>
+            </div>
+
+            <p style="margin-top: 15px;"><strong>ローカルファイルを使用する場合：</strong></p>
+            <div class="code-box">
+                <code>style: |<br>
+&nbsp;&nbsp;@import 'custom-theme.css';</code>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>✨ 特徴</h2>
+            <ul class="feature-list">
+                <li>日本語フォント最適化（Noto Sans JP対応）</li>
+                <li>見やすいカラースキーム</li>
+                <li>2段組・3段組レイアウト対応</li>
+                <li>タイトルページ用スタイル</li>
+                <li>ハイライトボックス</li>
+                <li>テーブルセンター配置</li>
+                <li>レスポンシブ対応</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>🎨 カラーパレット</h2>
+            <div class="color-palette">
+                <div class="color-item">
+                    <div class="color-box" style="background-color: #00AB8E;"></div>
+                    <div class="color-label">#00AB8E<br>メインカラー</div>
+                </div>
+                <div class="color-item">
+                    <div class="color-box" style="background-color: #FFAA00;"></div>
+                    <div class="color-label">#FFAA00<br>アクセント</div>
+                </div>
+                <div class="color-item">
+                    <div class="color-box" style="background-color: #262626;"></div>
+                    <div class="color-label">#262626<br>テキスト</div>
+                </div>
+                <div class="color-item">
+                    <div class="color-box" style="background-color: #ffffff; border-color: #262626;"></div>
+                    <div class="color-label">#FFFFFF<br>背景</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>📋 レイアウトクラス</h2>
+            <ul class="feature-list">
+                <li><code>lead</code> - タイトルページ用（中央揃え）</li>
+                <li><code>two-columns</code> - 2段組レイアウト</li>
+                <li><code>three-columns</code> - 3段組レイアウト</li>
+                <li><code>highlight-box</code> - ハイライトボックス</li>
+                <li><code>center-table</code> - テーブル中央配置</li>
+                <li><code>accent</code> - アクセントテキスト</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>📖 サンプル</h2>
+            <p>サンプルスライドは<a href="https://github.com/yoshizawariku/Marp4VSCode-CSS-CustomPrompt"
+                    class="github-link">GitHubリポジトリ</a>で確認できます。</p>
+        </div>
+
+        <footer>
+            <p>Created by <a href="https://github.com/yoshizawariku" class="github-link">yoshizawariku</a></p>
+            <p style="margin-top: 10px; font-size: 0.9rem;">
+                <a href="https://github.com/yoshizawariku/Marp4VSCode-CSS-CustomPrompt" class="github-link">
+                    View on GitHub
+                </a>
+            </p>
+        </footer>
+    </div>
+
+    <script>
+        // URLをクリックでコピー
+        document.getElementById('cssUrl').addEventListener('click', function () {
+            const url = this.textContent;
+            navigator.clipboard.writeText(url).then(() => {
+                const original = this.textContent;
+                this.textContent = 'コピーしました！';
+                setTimeout(() => {
+                    this.textContent = original;
+                }, 2000);
+            });
+        });
+    </script>
+</body>
+
+</html>
